@@ -1,6 +1,10 @@
 /**
  * Establishes connection with the game server
  */
+ 
+//  setInterval(function() { callback( "  params"); }, 50); 
+
+
 
 const net = require('net');
 
@@ -10,18 +14,18 @@ const connect = function() {
     host: 'localhost',
     port: 50541
   });
-
-  conn.on('connect', () => {
-    conn.write('Name: LRW');
-  });
   conn.setEncoding('utf8'); // interpret incoming data as text
 
-  conn.on('connect', () => {
+ 
+ conn.on('connect', () => {
     console.log("Connection Established");
+    conn.write('Name: LRW');    
+    // setInterval(function() {
+    //   conn.write("Move: up");
+    // }, 50)
   })
-
   
-
+  
   conn.on('data', (data) => {
     console.log('Server says:', data);
   });
@@ -30,7 +34,9 @@ const connect = function() {
 
 
 
-
+// conn.on('connect', () =>{
+//   conn.write('Move: up')
+// })
 
 
 module.exports =  connect ;

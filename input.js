@@ -14,7 +14,17 @@ const handleUserInput = function(key) {
       connection.write("Move: right")
     } if (key === '\u0073') {
       connection.write("Move: down")
-    } 
+    }
+
+    if (key === '\u0031') {
+      connection.write("Say: Nice")
+    } if (key === '\u0032') {
+      connection.write("Say: You got me")
+    } if (key === '\u0033') {
+      connection.write("Say: Let's Go!")
+    }
+    
+    
   
 }
 

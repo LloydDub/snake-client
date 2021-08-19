@@ -11,9 +11,9 @@ const net = require('net');
 const { IP, PORT,  } = require('./constants');
  
 const connect = function() {
-  const conn = net.createConnection({ 
-    host: IP,
-    port: PORT,
+  const conn = net.createConnection({
+    host: IP, 
+    port: PORT
   });
   conn.setEncoding('utf8'); // interpret incoming data as text
 
@@ -21,9 +21,9 @@ const connect = function() {
  conn.on('connect', () => {
     console.log("Connection Established");
     conn.write('Name: LRW');    
-    setInterval(function() {
-      conn.write("Move: up");
-    }, 100)
+    // setInterval(function() {
+    //   conn.write("Move: up");
+    // }, 50)
   })
   
   

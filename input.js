@@ -1,33 +1,25 @@
 let connection;
 
-
-
 const handleUserInput = function(key) {
-  
+
     if (key === '\u0003') {
       process.exit();
-    } if (key === '\u0077') {
-      connection.write("Move: up")
-    } if (key === '\u0061') {
-      connection.write("Move: left")
-    } if (key === '\u0064') {
-      connection.write("Move: right")
-    } if (key === '\u0073') {
-      connection.write("Move: down")
-    }
-
-    if (key === '\u0031') {
-      connection.write("Say: Nice, I mean hiss")
-    } if (key === '\u0032') {
-      connection.write("Say: You got me")
-    } if (key === '\u0033') {
-      connection.write("Say: Let's Go!")
-    }
-    
-    
-  
+    } else if (key === '\u0077') {
+      connection.write("Move: up");
+    } else if (key === '\u0061') {
+      connection.write("Move: left");
+    } else if (key === '\u0064') {
+      connection.write("Move: right");
+    } else if (key === '\u0073') {
+      connection.write("Move: down");
+    } else if (key === '\u0031') {// canned messages
+      connection.write("Say: Hi, I mean hiss");
+    } else if (key === '\u0032') {
+      connection.write("Say: Ssss");
+    } else if (key === '\u0033') {
+      connection.write("Say: Let's Go!");
+    }  
 }
-
 
 
 const setupInput = function(conn) {

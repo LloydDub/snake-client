@@ -1,4 +1,4 @@
-const IP = 'localhost'   // variables for the connection details
+const IP = 'localhost';   // variables for the connection details
 const PORT = 50541;
 
 module.exports = {
